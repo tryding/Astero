@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { withStyles } from "@material-ui/core";
 
-const styles = themes => ({
-  patchTracker: {
-    height: "fit-content"
-  }
-});
+const styles = themes => ({});
 
 const Tracker = props => {
   const { classes } = props
 
   return (
-    <div className={classes.patchTracker}>
+    <div>
       <h3> Patch Tracker Section </h3>
       <ul>
         <li>Version 0.0.5</li>

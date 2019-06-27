@@ -13,7 +13,8 @@ const styles = theme => ({
   footer: {
     display: "grid",
     gridTemplateColumns: "1fr 2fr",
-    gridRowStart: "3"
+    gridRowStart: "3",
+    height: "fit-content"
   },
   aboutAstero: {
     gridRowStart: "2"
