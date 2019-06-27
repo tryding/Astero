@@ -8,8 +8,12 @@ and a larger link to the steam page below those */
 
 const styles = {
   button: {
-    margin: "5px"
-  }
+    margin: "10px"
+  },
+  navbar: {
+    textAlign: "center",
+    gridRowStart: "1"
+  },
 };
 
 const Navbar = props => {
@@ -23,15 +27,13 @@ const Navbar = props => {
   };
 
   return (
-    <div className="navbar">
-      <div>
+    <div className={classes.navbar}>
         <h1>ASTERO</h1>
-      </div>
       <div className="header-buttons">
-        <Button component={Link} to="/" variant="contained" className={classes.button}>
+        <Button component={Link} to="/" variant="contained" className={classes.button} onMouseLeave={() => setOpen(false)}>
           Home
         </Button>
-        <Button component={Link} to="/team" variant="contained" className={classes.button}>
+        <Button component={Link} to="/team" variant="contained" className={classes.button} onMouseLeave={() => setOpen(false)}>
           Team
         </Button>
         <Button
@@ -60,12 +62,12 @@ const Navbar = props => {
         <Button component={Link} to="/blog" variant="contained" className={classes.button}>
           Blog
         </Button>
-        <Button variant="contained" className={classes.button}>
+        <Button variant="contained" className={classes.button} onMouseLeave={() => setOpen(false)}>
           Forums
         </Button>
       </div>
       <div>
-        <Button variant="contained" className={classes.button}>
+        <Button variant="contained" className={classes.button} onMouseLeave={() => setOpen(false)}>
           Buy
         </Button>
       </div>

@@ -6,15 +6,17 @@ import Contact from "./contact";
 
 const styles = theme => ({
   homeLayout: {
-    display: "grid",
     justifyContent: "center",
-    marginTop: "50px",
     textAlign: "left",
+    display: "grid"
   },
   footer: {
     display: "grid",
     gridTemplateColumns: "1fr 2fr",
-    alignContent: "end"
+    gridRowStart: "3"
+  },
+  aboutAstero: {
+    gridRowStart: "2"
   }
 });
 
@@ -22,18 +24,19 @@ const Home = props => {
   const { classes } = props;
 
   return (
-    <div>
+    <div className={classes.homeLayout}>
       <Navbar />
-      <div className={classes.homeLayout}>
+      <div className={classes.aboutAstero}>
         <iframe
           title="test"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/ITidiBe-0T0"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         />
+        <h2>About Astero</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis
           quam eget tellus tristique, in finibus massa suscipit. In hac
@@ -59,10 +62,10 @@ const Home = props => {
           dictum. Ut ullamcorper mi tellus. Aenean sollicitudin magna tellus, a
           iaculis eros feugiat id.
         </p>
-        <div className={classes.footer}>
-          <Tracker />
-          <Contact />
-        </div>
+      </div>
+      <div className={classes.footer}>
+        <Tracker />
+        <Contact />
       </div>
     </div>
   );
